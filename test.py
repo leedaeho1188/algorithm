@@ -151,14 +151,54 @@
 # -------------------------------2869-------------------------------------
 # 범위가 매우 넓기 때문에 while구문을 사용해서 돌리면 시간초과가 나온다.
 # 문제의 포인트는 달팽이가 올라갔을 때 나무 막대기에 다 올라가면 내려가지 않는다.
+# import math
+# A,B,V = (map(int, input().split()))
+# day = 0
+# # ((A-B)*(day-1))+A = V 이라는 공식이 나온다.
+# # day를 두종류로 볼 수 있다. 마지막날과 마지막날을 제외한 그 전날들
+# # 마지막날은 A만 플러스 되고 다른날들은 A-B가 된다.
+# # 마지막 날에 달팽이가 V보다 같거나 높이 올라가기 때문에 day를 계산할 때 반올림을 해야한다.
+# day = math.ceil(((V-A)/(A-B)) + 1)
+# print(day)
+
+
+# -------------------------------10250------------------------------------------
+# import math
+# T = int(input())
+# lst = []
+# for i in range(T):
+#   H,W,N = map(int, input().split())
+#   Rm = ((N%H)*100) + (math.ceil(N/H))
+#   # N%H가 0일 경우를 구해야한다.
+#   if N%H == 0:
+#     Rm = (H*100) + (math.ceil(N/H))
+#   lst.append(Rm)
+
+# for i in range(len(lst)):
+#   print(lst[i])
+
+# ----------------------------1929-------------------------------------------------
+# 소수 찾는 공식
+# 2의 배수를 지운다.
+# 소수의 배수를 지운다.
 import math
-num = list(map(int, input().split()))
-day = 0
-A = num[0]
-B = num[1]
-V = num[2]
-day = math.ceil(((V-A)/(A-B)) + 1)
-print(day)
+
+def isPrime(i):
+  if i !=1:
+    j = int(math.sqrt(i))
+    for x in range(2, j+1):
+      # print(x)
+      if i % x == 0:
+        return False
+    return True
+
+M,N = map(int, input().split())
+for k in range(M, N+1):
+  if isPrime(k):
+    print(k)
+
+
+
 
 
 
