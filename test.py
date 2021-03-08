@@ -181,21 +181,21 @@
 # 소수 찾는 공식
 # 2의 배수를 지운다.
 # 소수의 배수를 지운다.
-import math
+# import math
 
-def isPrime(i):
-  if i > 1:
-    j = int(math.sqrt(i))
-    for x in range(2, j+1):
-      # print(x)
-      if i % x == 0:
-        return False
-    return True 
+# def isPrime(i):
+#   if i > 1:
+#     j = int(math.sqrt(i))
+#     for x in range(2, j+1):
+#       # print(x)
+#       if i % x == 0:
+#         return False
+#     return True 
 
-M,N = map(int ,input().split())
-for k in range(M, N+1):
-  if isPrime(k):
-    print(k)
+# M,N = map(int ,input().split())
+# for k in range(M, N+1):
+#   if isPrime(k):
+#     print(k)
 
 
 

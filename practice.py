@@ -22,25 +22,31 @@
 
 
 # ---------------------------------------1157-------------
-word = input().upper()
-word_lst = list(set(word))
-cnt = 0
-char_lst = []
-for i in word_lst:
-  cnt_1 = word.count(i)
-  if cnt_1 >= cnt:
-    cnt = cnt_1
-    if cnt_1 == cnt:
-      char_lst.append(i)
-    else:
-      char_lst = []
-      char_lst.append(i)
+# word = input().upper()
+# word_lst = list(set(word))
+# cnt = 0
+# char_lst = []
+# for i in word_lst:
+#   cnt_1 = word.count(i)
+#   if cnt_1 >= cnt:
+#     if cnt_1 == cnt:
+#       char_lst.append(i)
+#     else:
+#       char_lst = []
+#       char_lst.append(i)
+#     cnt = cnt_1
 
-if len(char_lst) > 1:
-  print('?')
-else:
-  print(char_lst[0])
+# if len(char_lst) > 1:
+#   print('?')
+# else:
+#   print(char_lst[0])
 
+# ----------------------------------------2941------------
+# word = input()
+# crtia = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z='] 
+# for i in crtia:
+#   word = word.replace(i, ".")
+# print(len(word))
 
   
 
