@@ -184,18 +184,19 @@
 import math
 
 def isPrime(i):
-  if i !=1:
+  if i > 1:
     j = int(math.sqrt(i))
     for x in range(2, j+1):
       # print(x)
       if i % x == 0:
         return False
-    return True
+    return True 
 
-M,N = map(int, input().split())
+M,N = map(int ,input().split())
 for k in range(M, N+1):
   if isPrime(k):
     print(k)
+
 
 
 
