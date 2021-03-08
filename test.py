@@ -149,18 +149,16 @@
 # print(x)
 
 # -------------------------------2869-------------------------------------
-
+# 범위가 매우 넓기 때문에 while구문을 사용해서 돌리면 시간초과가 나온다.
+# 문제의 포인트는 달팽이가 올라갔을 때 나무 막대기에 다 올라가면 내려가지 않는다.
+import math
 num = list(map(int, input().split()))
 day = 0
-T = 0
-while T < num[2]:
-  T = T + num[0]
-  day = day + 1
-  if T < num[2]:
-    T = T - num[1]
-
+A = num[0]
+B = num[1]
+V = num[2]
+day = math.ceil(((V-A)/(A-B)) + 1)
 print(day)
-
 
 
 
