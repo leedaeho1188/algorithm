@@ -246,52 +246,31 @@
 
 
 # --------------------------2805--------------------------------
-# import math
 
-# def cutting_tree(N):
-#   N = math.ceil(N/2)
-  
-#   tree_cut = (sum(tree[N-1:])-M)//N
-#   if tree_cut >= tree[N]:
-#     N = N - math.ceil(N/2)
-#     return cutting_tree(N)
-#   else:
-#     if tree_cut < tree[N-1]:
-#       N = N + math.ceil(N/2)
-#       return cutting_tree(N)
-#     else:
-#       print(tree_cut)
+# def binarySearch(M, tree): 
+#   start = 0
+#   end = max(tree)
 
-# N,M = map(int, input().split())
-# tree = list(map(int, input().split()))
-# tree.sort()
-# cutting_tree(N)
-
-
-def binarySearch(M, tree): 
-  start = 0
-  end = max(tree)
-
-  while start <= end: 
-    leng = 0 
-    mid = (start + end) // 2
+#   while start <= end: 
+#     leng = 0 
+#     mid = (start + end) // 2
     
-    for i in tree: 
-      if i >= mid: 
-        leng += i - mid 
+#     for i in tree: 
+#       if i >= mid: 
+#         leng += i - mid 
 
-    if leng >= M: 
-      start = mid + 1 
-      result = mid
-    else: 
-      end = mid - 1 
+#     if leng >= M: 
+#       start = mid + 1 
+#       result = mid
+#     else: 
+#       end = mid - 1 
 
-  return result
+#   return result
 
-N, M = map(int, input().split()) 
-tree = list(map(int, input().split())) 
+# N, M = map(int, input().split()) 
+# tree = list(map(int, input().split())) 
 
-print(binarySearch(M, tree))
+# print(binarySearch(M, tree))
 
 
 
