@@ -200,24 +200,98 @@
 # ---------------------------11729-------------------------------
 # 재귀함수
 # 조건에 맞으면 function을 계속 반복시킨다.
-n = int(input())
-def hanoi_recursive(n, a, b, c):
-  if n == 1:
-    print(a, c)
-    return
+# n = int(input())
+# def hanoi_recursive(n, a, b, c):
+#   if n == 1:
+#     print(a, c)
+#     return
 
-  else:
-    hanoi_recursive(n-1, a, c, b)
-    print(a, c)
-    hanoi_recursive(n-1, b, a, c)
+#   else:
+#     hanoi_recursive(n-1, a, c, b)
+#     print(a, c)
+#     hanoi_recursive(n-1, b, a, c)
     
     
-sum = 1
-for i in range(n-1):
-  sum = sum*2 + 1
-print(sum)
-# (원판의 개수, 시작지점, 보조, 목표지점)
-hanoi_recursive(n, 1, 2, 3)
+# sum = 1
+# for i in range(n-1):
+#   sum = sum*2 + 1
+# print(sum)
+# # (원판의 개수, 시작지점, 보조, 목표지점)
+# hanoi_recursive(n, 1, 2, 3)
+
+# -------------------------------11651-----------------
+# N = int(input())
+# lst = []
+# for i in range(N):
+#   [x,y] = map(int ,input().split())
+#   lst_xy = [x,y]
+#   lst.append(lst_xy)
+
+# lst.sort(key=lambda k: (k[1], k[0]))
+# for i in lst:
+#   print(i[0], i[1])
+
+# # --------------------------------------
+
+# N = int(input())
+# lst = []
+# for i in range(N):
+#   [x,y] = map(int ,input().split())
+#   lst_xy = [y,x]
+#   lst.append(lst_xy)
+
+# lst.sort()
+# for i in lst:
+#   print(i[1], i[0])
+
+
+# --------------------------2805--------------------------------
+# import math
+
+# def cutting_tree(N):
+#   N = math.ceil(N/2)
+  
+#   tree_cut = (sum(tree[N-1:])-M)//N
+#   if tree_cut >= tree[N]:
+#     N = N - math.ceil(N/2)
+#     return cutting_tree(N)
+#   else:
+#     if tree_cut < tree[N-1]:
+#       N = N + math.ceil(N/2)
+#       return cutting_tree(N)
+#     else:
+#       print(tree_cut)
+
+# N,M = map(int, input().split())
+# tree = list(map(int, input().split()))
+# tree.sort()
+# cutting_tree(N)
+
+
+def binarySearch(M, tree): 
+  start = 0
+  end = max(tree)
+
+  while start <= end: 
+    leng = 0 
+    mid = (start + end) // 2
+    
+    for i in tree: 
+      if i >= mid: 
+        leng += i - mid 
+
+    if leng >= M: 
+      start = mid + 1 
+      result = mid
+    else: 
+      end = mid - 1 
+
+  return result
+
+N, M = map(int, input().split()) 
+tree = list(map(int, input().split())) 
+
+print(binarySearch(M, tree))
 
 
 
