@@ -197,10 +197,27 @@
 #   if isPrime(k):
 #     print(k)
 
+# ---------------------------11729-------------------------------
+# 재귀함수
+# 조건에 맞으면 function을 계속 반복시킨다.
+n = int(input())
+def hanoi_recursive(n, a, b, c):
+  if n == 1:
+    print(a, c)
+    return
 
-
-
-
+  else:
+    hanoi_recursive(n-1, a, c, b)
+    print(a, c)
+    hanoi_recursive(n-1, b, a, c)
+    
+    
+sum = 1
+for i in range(n-1):
+  sum = sum*2 + 1
+print(sum)
+# (원판의 개수, 시작지점, 보조, 목표지점)
+hanoi_recursive(n, 1, 2, 3)
 
 
 
