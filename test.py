@@ -300,31 +300,55 @@
 #   print(i)
 
 # ---------------------------1874--------------------------------------------
-N = int(input())
-stack = []
-lst = []
-max_s = 0
-for i in range(N):
-  x = int(input())
-  if x-max_s <= 0:
-    if x == stack[-1]:
-      stack.pop()
-      lst.append('-')
-    else:
-      lst.append('NO')
-  else:
-    for i in range(x-max_s):
-      max_s = max_s + 1
-      stack.append(max_s)
-      lst.append('+')
-    stack.pop()
-    lst.append('-')
+# N = int(input())
+# stack = []
+# lst = []
+# max_s = 0
+# for i in range(N):
+#   x = int(input())
+#   if x-max_s <= 0:
+#     if x == stack[-1]:
+#       stack.pop()
+#       lst.append('-')
+#     else:
+#       lst.append('NO')
+#   else:
+#     for i in range(x-max_s):
+#       max_s = max_s + 1
+#       stack.append(max_s)
+#       lst.append('+')
+#     stack.pop()
+#     lst.append('-')
 
-if 'NO' in lst:
-  print('NO')
-else:
-  for i in lst:
-    print(i)
+# if 'NO' in lst:
+#   print('NO')
+# else:
+#   for i in lst:
+#     print(i)
+# ------------------------------1021--------------------------------
+N,M = map(int, input().split())
+lst = []
+for x in range(1, N+1):
+  lst.append(x)
+cnt = 0
+num = list(map(int, input().split()))
+for i in num:
+  while lst.index(i) != 0:
+    idx = lst.index(i)+1
+    if idx > (len(lst)//2)+1:
+      d = lst[-1]
+      lst.pop()
+      lst.insert(0, d)
+      cnt = cnt + 1
+    else:
+      d = lst[0]
+      lst.pop(0)
+      lst.append(d)
+      cnt = cnt + 1
+  lst.pop(0)
+
+print(cnt)
+
 
 
 
