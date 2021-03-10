@@ -300,6 +300,31 @@
 #   print(i)
 
 # ---------------------------1874--------------------------------------------
+N = int(input())
+stack = []
+lst = []
+max_s = 0
+for i in range(N):
+  x = int(input())
+  if x-max_s <= 0:
+    if x == stack[-1]:
+      stack.pop()
+      lst.append('-')
+    else:
+      lst.append('NO')
+  else:
+    for i in range(x-max_s):
+      max_s = max_s + 1
+      stack.append(max_s)
+      lst.append('+')
+    stack.pop()
+    lst.append('-')
+
+if 'NO' in lst:
+  print('NO')
+else:
+  for i in lst:
+    print(i)
 
 
 
