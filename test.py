@@ -277,22 +277,25 @@
 # answer = []
 # while stack != ['.']:
 #   stack = list(input())
-#   lst = ['(', ')', '[', ']']
-#   n = -1
 #   if stack == ['.']:
 #     break
+#   lst = ['(', ')', '[', ']']
+#   n = -1
+#   # for 반복문으로 stack에 뒤에부터 lst안에 있는 element 빼고 다른 element는 다 빼낸다.
 #   for i in range(len(stack)):
 #     if stack[n] not in lst:
 #       stack.pop(n)
-#     else:
+#     else: #lst안에 있는 element가 stack[n]자리에 있으면 stack[n-1]값을 검사한다.
 #       n = n-1
 #   string = ""
 #   for ele in stack:
 #     string += ele
-#   while  '()' in string or '[]' in string:
+#   # string안에 괄호가 제대로 되어있는지 알기위해서 '()', '[]' 값이랑 비교하고 그 값들을 없앤다.
+#   # ')('이나 '][' 제대로 괄호가 나열되어있지 않으면 string에 값이 남아 있을 것이다.
+#   while  '()' in string or '[]' in string: 
 #     string = string.replace('()', '')
 #     string = string.replace('[]', '')
-#   if not string:
+#   if not string: #만약 string변수 안에 아무런 값도 없으면!
 #     answer.append('yes')
 #   else:
 #     answer.append('no')
@@ -336,14 +339,12 @@ for i in num:
   while lst.index(i) != 0:
     idx = lst.index(i)+1
     if idx > (len(lst)//2)+1:
-      d = lst[-1]
+      lst.insert(0, lst[-1])
       lst.pop()
-      lst.insert(0, d)
       cnt = cnt + 1
     else:
-      d = lst[0]
-      lst.pop(0)
-      lst.append(d)
+      lst.append(lst[0])
+      lst.pop(0)      
       cnt = cnt + 1
   lst.pop(0)
 
