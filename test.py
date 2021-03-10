@@ -272,5 +272,39 @@
 
 # print(binarySearch(M, tree))
 
+# ------------------------------4949--------------------------------------
+# stack = []
+# answer = []
+# while stack != ['.']:
+#   stack = list(input())
+#   lst = ['(', ')', '[', ']']
+#   n = -1
+#   if stack == ['.']:
+#     break
+#   for i in range(len(stack)):
+#     if stack[n] not in lst:
+#       stack.pop(n)
+#     else:
+#       n = n-1
+#   string = ""
+#   for ele in stack:
+#     string += ele
+#   while  '()' in string or '[]' in string:
+#     string = string.replace('()', '')
+#     string = string.replace('[]', '')
+#   if not string:
+#     answer.append('yes')
+#   else:
+#     answer.append('no')
+# for i in answer:
+#   print(i)
+
+# ---------------------------1874--------------------------------------------
+
+
+
+
+
+
 
 

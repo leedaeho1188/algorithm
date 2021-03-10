@@ -59,15 +59,28 @@
 # print(N)
 
 # ---------------------------------------10250-------------
-import math
-T = int(input())
-lst_rooms = []
-for i in range(T):
-  H,W,N = map(int, input().split())
-  room = (N%H)*100 + math.ceil(N/H)
-  if N%H == 0:
-    room = H*100 + math.ceil(N/H)
-  lst_rooms.append(room)
+# import math
+# T = int(input())
+# lst_rooms = []
+# for i in range(T):
+#   H,W,N = map(int, input().split())
+#   room = (N%H)*100 + math.ceil(N/H)
+#   if N%H == 0:
+#     room = H*100 + math.ceil(N/H)
+#   lst_rooms.append(room)
 
-for i in lst_rooms:
-  print(i)  
+# for i in lst_rooms:
+#   print(i)  
+# ---------------------------------------1929---------------
+# import math
+# def Prime_num(i):
+#   if i > 1:
+#     j = int(math.sqrt(i))
+#     for x in range(2, j+1):
+#       if i%x == 0:
+#         return False
+#     return True
+# M,N = map(int, input().split())
+# for i in range(M, N+1):
+#   if Prime_num(i):
+#     print(i)
