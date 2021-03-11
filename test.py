@@ -429,5 +429,28 @@
 #             exit()
 # print(result)
 # ---------------------------1003------------------------------
+# from sys import stdin
+# read = stdin.readline
+# memo = {
+#   0: [1, 0],
+#   1: [0, 1]
+# }
+# lst = []
 
+# def fibonacci(n, fibo_memo):
+#   if n in fibo_memo:
+#     return fibo_memo[n]
+#   nth_fibo = [fibonacci(n-1, fibo_memo)[0] + fibonacci(n-2, fibo_memo)[0], fibonacci(n-1, fibo_memo)[1] + fibonacci(n-2, fibo_memo)[1]]
+#   fibo_memo[n] = nth_fibo
+#   return nth_fibo
 
+# for _ in range(int(read())):
+#   num = int(read())
+#   lst.append(num)
+#   fibonacci(num, memo)
+  
+
+# # for i in lst:
+# for i in lst:
+#   print((memo[i][0]),memo[i][1])
+# ----------------------------11053------------------------------
