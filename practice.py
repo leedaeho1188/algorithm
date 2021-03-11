@@ -84,3 +84,51 @@
 # for i in range(M, N+1):
 #   if Prime_num(i):
 #     print(i)
+
+
+
+# M,N = map(int, input().split())
+# dic = {}
+# for i in range(N):
+#   dic[i+1] = list(map(int, input().split()))
+#   dic[i+1].insert(0, 1)
+#   dic[i+1].append(1)
+# dic[0] = list(1 for i in range(M+2))
+# dic[N+1] = list(1 for i in range(M+2))
+# day = 0
+# dic_1 = {}
+# n = 0
+# while '0' in set(str(dic.values())):
+#   for i in range(1, N+1):
+#     for j in range(1, M+1):
+#       if dic[i][j] == 1:
+#         dic_1[i
+#         ] = j
+#   for key in dic_1.keys():
+#     for value in dic_1.get(key):
+#       if dic[key][value+1] == 0:
+#         dic[key][value+1] = dic[key][value+1] + 1
+#         n = n+1
+#       if dic[key][value-1] == 0:
+#         dic[key][value-1] = dic[key][value-1] + 1
+#         n = n+1
+#       if dic[key-1][value] == 0:
+#         dic[key-1][value] = dic[key-1][value] + 1
+#         n = n+1
+#       if dic[key+1][value] == 0:
+#         dic[key+1][value] = dic[key+1][value] + 1
+#         n = n+1
+#   if n == 0:
+#     print(-1)
+#     break
+#   else: 
+#     day = day+1
+#     n = 0
+#     dic_1 = {}
+# if '0' not in set(str(dic.values())):
+#   print(day)
+
+0 -1 1 1 1 1
+-1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 1 1 1 1
