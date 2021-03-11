@@ -329,28 +329,68 @@
 #   for i in lst:
 #     print(i)
 # ------------------------------1021--------------------------------
-N,M = map(int, input().split())
-lst = []
-for x in range(1, N+1):
-  lst.append(x)
-cnt = 0
-num = list(map(int, input().split()))
-for i in num:
-  while lst.index(i) != 0:
-    idx = lst.index(i)+1
-    if idx > (len(lst)//2)+1:
-      lst.insert(0, lst[-1])
-      lst.pop()
-      cnt = cnt + 1
-    else:
-      lst.append(lst[0])
-      lst.pop(0)      
-      cnt = cnt + 1
-  lst.pop(0)
+# N,M = map(int, input().split())
+# lst = []
+# for x in range(1, N+1):
+#   lst.append(x)
+# cnt = 0
+# num = list(map(int, input().split()))
+# for i in num:
+#   while lst.index(i) != 0:
+#     idx = lst.index(i)+1
+#     if idx > (len(lst)//2)+1:
+#       lst.insert(0, lst[-1])
+#       lst.pop()
+#       cnt = cnt + 1
+#     else:
+#       lst.append(lst[0])
+#       lst.pop(0)      
+#       cnt = cnt + 1
+#   lst.pop(0)
 
-print(cnt)
+# print(cnt)
+#------------------------------2606-DFS-----------------------------
+# N = int(input())
+# S = int(input())
+# dic = {}
+# for i in range(N):
+#   dic[i+1] = set()
+# for j in range(S):
+#   a,b =  map(int, input().split())
+#   dic[a].add(b)
+#   dic[b].add(a)
 
+# def dfs(start, dic):
+#   for i in dic[start]:
+#     if i not in visited:
+#       visited.append(i)
+#       dfs(i, dic)
+# visited = []
+# dfs(1, dic)
+# print(len(visited)-1)
+# -------------------------2606--BFS-----------------------------
+# from sys import stdin
+# read = stdin.readline
+# dic={}
+# for i in range(int(read())):
+#     dic[i+1] = set()
+# for j in range(int(read())):
+#     a, b = map(int,read().split())
+#     dic[a].add(b)
+#     dic[b].add(a)
 
+# def bfs(start):
+#     queue = [start]
+#     while queue:
+#         for i in dic[queue.pop()]:
+#             if i not in visited:
+#                 visited.append(i)
+#                 queue.append(i)
+# visited = []
+# bfs(1)
+# print(len(visited)-1)
+
+#----------------------------7576--------------------------------
 
 
 
