@@ -529,34 +529,61 @@
 #   for i in range(len(word)):
 #     if i != len(word)-1:
 #       if word[i] == word[i+1]:
-#         pass
-#       elif word[i] in word[i+1:]:
+#         continue
+#       elif word[i] in word[i+2:]:
 #         break
 #     else: 
 #       num = num + 1
 # print(num)
 
 # --------------------------------2839번---------------------------
-N = int(input())
-num = N//3
-n = 0
-for i in range(num+1):
-  k = N-3*i
-  if k%5 == 0:
-    answer = i+k/5
-    n = 1
-    break
-if n == 0:
-  print(-1)
-else:
-  print(int(answer))
+# N = int(input())
+# num = N//3
+# n = 0
+# for i in range(num+1):
+#   k = N-(3*i)
+#   if k%5 == 0: 
+#     answer = i+(k/5)
+#     n = 1
+#     break
+# if n == 0:
+#   print(-1)
+# else:
+#   print(int(answer))
+# -----------------------------1011번------------------------------
+# import math
+
+# N = int(input())
+
+# count = 0                                    #최소 작동 횟수
+# result = []
+
+# for _ in range(N):
+#     a, b = map(int, input().split())
+#     distance = b - a                         #주어진 값들간의 거리
+
+#     num = math.floor(math.sqrt(distance))  #주어진 값들 사이의 거리에 루트 씌움 (제곱근) , floor처리되어 이미 정수임    
+#     num_jegob = num**2                # 정수를 제곱근으로 갖는 제곱수(ex. 9 : 9의 제곱근은 3)
+
+#     if distance == num_jegob:
+#         count = (num*2)-1
+
+#     elif num_jegob < distance <= num_jegob + num:
+#         count = (num*2)
+
+#     elif (num_jegob + num) < distance:
+#         count = (num*2) + 1
+
+#     elif distance < 4:
+#         count = distance
+#     result.append(count)
 
 
-    
 
+# for x in result:
+#     print(x)
 
-
-
+# ---------------------------------4948번-------------------------------
 
 
 
