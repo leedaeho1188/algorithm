@@ -128,7 +128,3 @@
 # if '0' not in set(str(dic.values())):
 #   print(day)
 
-0 -1 1 1 1 1
--1 1 1 1 1 1
-1 1 1 1 1 1
-1 1 1 1 1 1

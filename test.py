@@ -391,7 +391,7 @@
 # print(len(visited)-1)
 
 #----------------------------7576--------------------------------
-#몇일이 지나야 토마토가 다 익는지..
+# 몇일이 지나야 토마토가 다 익는지..
 # from collections import deque
 
 # dx = [1, -1, 0, 0]
@@ -429,6 +429,7 @@
 #             exit()
 # print(result)
 # ---------------------------1003------------------------------
+
 # from sys import stdin
 # read = stdin.readline
 # memo = {
@@ -454,3 +455,110 @@
 # for i in lst:
 #   print((memo[i][0]),memo[i][1])
 # ----------------------------11053------------------------------
+# x = int(input())
+
+# arr = list(map(int, input().split()))
+
+# dp = [1 for i in range(x)]
+
+# for i in range(x):
+#     for j in range(i):
+#         if arr[i] > arr[j]:
+#             dp[i] = max(dp[i], dp[j]+1)
+
+# print(max(dp))
+# --------------------------10815번--------------------------------
+# N = int(input())
+# num_N = list(map(int, input().split()))
+# # 이분탐색을 위해서 num리스트를 정렬.
+# num_N.sort()
+# M = int(input())
+# num_M = list(map(int, input().split()))
+# lst = []
+# for i in range(M):
+#   left= 0 #num_N 처음숫자 index
+#   right = N-1 #num_N 마지막숫자
+#   lst.append(0)
+#   while left <= right:
+#     mid = (left+right)//2
+#     if num_N[mid] == num_M[i]:
+#       lst.pop()
+#       lst.append(1)
+#       break
+#     elif num_N[mid] > num_M[i]:
+#       right = mid-1
+#     else:
+#       left = mid+1
+# answer = " ".join(map(str, lst))
+# print(answer) 
+
+# -------------------------------2164번--------------------------------
+# from collections import deque
+# N = int(input())
+# d = deque()
+# for i in range(1, N+1):
+#   d.append(i)
+# while len(d) != 1:
+#   d.popleft()
+#   d.rotate(-1)
+# print(d[0])
+# -------------------------------2751번----------------------------
+# from sys import stdin
+# read = stdin.readline
+# N = int(read())
+# lst = []
+# for _ in range(N):
+#   n = int(read())
+#   lst.append(n)
+# for i in range(N):
+#   for j in range(i+1, N):
+#     if lst[j] < lst[i]:
+#       k = lst[i]
+#       lst[i] = lst[j]
+#       lst[j] = k
+
+# for num in lst:
+#   print(num)
+
+# -----------------------1316번--답 봤다..다시풀자..--------------------------
+# 같은 character가 붙어있어야된다.
+# N = int(input())
+# num = 0
+# for _ in range(N):
+#   word = list(input())
+#   for i in range(len(word)):
+#     if i != len(word)-1:
+#       if word[i] == word[i+1]:
+#         pass
+#       elif word[i] in word[i+1:]:
+#         break
+#     else: 
+#       num = num + 1
+# print(num)
+
+# --------------------------------2839번---------------------------
+N = int(input())
+num = N//3
+n = 0
+for i in range(num+1):
+  k = N-3*i
+  if k%5 == 0:
+    answer = i+k/5
+    n = 1
+    break
+if n == 0:
+  print(-1)
+else:
+  print(int(answer))
+
+
+    
+
+
+
+
+
+
+
+
+
