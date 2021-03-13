@@ -622,5 +622,41 @@
 #   if a == -1 and b == -1 and c == -1 :
 #     break
 #   print('w(%d, %d, %d) = %d' % (a, b, c, w(a, b, c)))
+  
 
 # -------------------------------9461------------------------------------------
+# from sys import stdin
+# read = stdin.readline
+# memo = {
+#   1 : 1,
+#   2 : 1,
+#   3 : 1
+# }
+
+# def triangle(n):
+#   if n in memo:
+#     return memo[n]
+  
+#   else:
+#     num = triangle(n-2) + triangle(n-3)
+#     memo[n] = num
+#     return num
+
+
+# for i in range(int(read())):
+#   print(triangle(int(read())))
+
+# -----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
