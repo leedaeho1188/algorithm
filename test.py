@@ -616,12 +616,13 @@
 #     w_num = w(a-1, b, c) + w(a-1, b-1, c) + w(a-1, b, c-1) - w(a-1, b-1, c-1)
 #     memo[(a, b, c)] = w_num
 #     return w_num
-# lst = []
+
 # while True:
 #   a, b, c = map(int, read().split())
 #   if a == -1 and b == -1 and c == -1 :
 #     break
 #   print('w(%d, %d, %d) = %d' % (a, b, c, w(a, b, c)))
+
   
 
 # -------------------------------9461------------------------------------------
@@ -630,9 +631,8 @@
 # memo = {
 #   1 : 1,
 #   2 : 1,
-#   3 : 1
+#   3 : 1 
 # }
-
 # def triangle(n):
 #   if n in memo:
 #     return memo[n]
@@ -646,7 +646,24 @@
 # for i in range(int(read())):
 #   print(triangle(int(read())))
 
+# ---------------------------1149--------------------------------
+# from sys import stdin
+# read = stdin.readline
+# lst = []
+# N = int(read())
+# for _ in range(N):
+#   lst.append(list(map(int, read().split())))
+# for i in range(1, N):
+#   lst[i][0] = min(lst[i-1][1], lst[i-1][2]) + lst[i][0] 
+#   lst[i][1] = min(lst[i-1][0], lst[i-1][2]) + lst[i][1]
+#   lst[i][2] = min(lst[i-1][0], lst[i-1][1]) + lst[i][2]
+# print(min(lst[N-1]))
+
 # -----------------------------------------------------------
+
+
+
+
 
 
 
