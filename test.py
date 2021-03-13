@@ -468,29 +468,7 @@
 
 # print(max(dp))
 # --------------------------10815번--------------------------------
-# N = int(input())
-# num_N = list(map(int, input().split()))
-# # 이분탐색을 위해서 num리스트를 정렬.
-# num_N.sort()
-# M = int(input())
-# num_M = list(map(int, input().split()))
-# lst = []
-# for i in range(M):
-#   left= 0 #num_N 처음숫자 index
-#   right = N-1 #num_N 마지막숫자
-#   lst.append(0)
-#   while left <= right:
-#     mid = (left+right)//2
-#     if num_N[mid] == num_M[i]:
-#       lst.pop()
-#       lst.append(1)
-#       break
-#     elif num_N[mid] > num_M[i]:
-#       right = mid-1
-#     else:
-#       left = mid+1
-# answer = " ".join(map(str, lst))
-# print(answer) 
+
 
 # -------------------------------2164번--------------------------------
 # from collections import deque
@@ -548,7 +526,7 @@
 #     break
 # if n == 0:
 #   print(-1)
-# else:
+#  else:
 #   print(int(answer))
 # -----------------------------1011번------------------------------
 # import math
@@ -556,34 +534,54 @@
 # N = int(input())
 
 # count = 0                                    #최소 작동 횟수
-# result = []
+# t = int(input())
 
-# for _ in range(N):
-#     a, b = map(int, input().split())
-#     distance = b - a                         #주어진 값들간의 거리
-
-#     num = math.floor(math.sqrt(distance))  #주어진 값들 사이의 거리에 루트 씌움 (제곱근) , floor처리되어 이미 정수임    
-#     num_jegob = num**2                # 정수를 제곱근으로 갖는 제곱수(ex. 9 : 9의 제곱근은 3)
-
-#     if distance == num_jegob:
-#         count = (num*2)-1
-
-#     elif num_jegob < distance <= num_jegob + num:
-#         count = (num*2)
-
-#     elif (num_jegob + num) < distance:
-#         count = (num*2) + 1
-
-#     elif distance < 4:
-#         count = distance
-#     result.append(count)
-
-
-
-# for x in result:
-#     print(x)
+# for _ in range(t):
+#     x, y = map(int,input().split())
+#     distance = y - x
+#     count = 0  # 이동 횟수
+#     move = 1  # count별 이동 가능한 거리
+#     move_plus = 0  # 이동한 거리의 합
+#     while move_plus < distance :
+#         count += 1
+#         move_plus += move  # count 수에 해당하는 move를 더함
+#         if count % 2 == 0 :  # count가 2의 배수일 때, 
+#             move += 1  
+#     print(count)
 
 # ---------------------------------4948번-------------------------------
+# from sys import stdin
+# import math
+# read = stdin.readline
+
+# def sosu(i):
+#   if i%2 ==0 and i != 2:
+#     return False
+#   for j in range(2, int(math.sqrt(i))+1):
+#     if i%j ==0:
+#       return False
+#   return True
+  
+# lst = []
+# for k in range(2, 2*(123456)+1):
+#   if sosu(k):
+#     lst.append(k)
+
+# while True:
+#   N  = int(read())
+#   if N == 0:
+#     break
+
+#   cnt = 0
+#   for x in lst:
+#     if N < x <= N*2:
+#       cnt += 1
+
+#   print(cnt)
+# ----------------------------1436번--------------------------------
+
+
+
 
 
 
