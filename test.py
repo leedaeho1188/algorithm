@@ -579,6 +579,17 @@
 
 #   print(cnt)
 # ----------------------------1436번--------------------------------
+# n = int(input())
+# cnt = 0 #숫자에 666이 있을 때마다 cnt수를 올린다.
+# six_n = 666 #while loop이 돌때마다 six_n이 1추가된다.
+# while True:
+#     if '666' in str(six_n):
+#         cnt += 1
+#     if cnt == n: #cnt가 n번째와 같기 때문이다.
+#         print(six_n)
+#         break
+#     six_n += 1
+
 
 
 
