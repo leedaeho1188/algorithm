@@ -127,4 +127,97 @@
 #     dic_1 = {}
 # if '0' not in set(str(dic.values())):
 #   print(day)
+# -------------------------1316-------------------------------
+# from sys import stdin
+# read = stdin.readline
+# cnt = int(read())
+# for _ in range(cnt):
+#   word = read()
+#   for i in range(len(word)):
+#     if i != len(word)-1:
+#       if word[i] == word[i+1]:
+#         continue
+#       elif word[i] in word[i+2:]:
+#         cnt -= 1
+#         break
+  
+# print(cnt)
+
+# -------------------------2839----------------------------------
+# from sys import stdin
+# read = stdin.readline
+# N = int(read())
+# cnt = 0
+# while N >= 0:
+#   if N%5 == 0:
+#     cnt += N/5
+#     print(int(cnt))
+#     break
+#   else: 
+#     cnt += 1
+#     N -= 3
+# if N < 0:
+#   print(-1)
+# -----------------------1011----------------------------------
+# from sys import stdin
+# read = stdin.readline
+# for _ in range(int(read())):
+#   x, y = map(int, read().split())
+#   dist = y-x
+#   total = 0
+#   cnt = 0
+#   move = 1
+#   while dist > total:
+#     total += move
+#     cnt += 1
+#     if cnt%2 == 0:
+#       move += 1
+#   print(cnt)
+# ----------------------------4948---------------------------
+# from sys import stdin
+# import math
+# read = stdin.readline
+# lst = []
+
+# def sosu(i):
+#   if i%2 == 0 and i != 2:
+#     return False
+#   for j in range(2, int(math.sqrt(i))+1):
+#     if i%j == 0:
+#       return False
+#   return True
+
+# for i in range(2, (123456*2)+1):
+#   if sosu(i):
+#     lst.append(i)
+# while True:
+#   N = int(read())
+#   if N == 0:
+#     break
+#   cnt = 0
+#   for num in lst:
+#     if N < num <= 2*N:
+#       cnt += 1
+#   print(cnt)
+# -----------------------------1436----------------------------
+# from sys import stdin
+# read = stdin.readline
+# N = int(read())
+# cnt = 0
+# num = 666
+# while True:
+#   if '666' in str(num):
+#     cnt += 1
+#   if cnt == N:
+#     print(num)
+#     break
+#   num += 1
+
+
+
+
+
+
+
+
 
