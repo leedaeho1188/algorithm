@@ -682,30 +682,43 @@
 # print(max(lst[N-1]))
 
 # -----------------------------10828-------------------------------------
-from sys import stdin
-read = stdin.readline
-stack = []
-for _ in range(int(read())):
-  cmd = read().split()
-  if 'push' in cmd:
-    stack.append(int(cmd[1]))
-  elif 'pop' in cmd:
-    if len(stack) != 0:
-      t = stack.pop()
-      print(t)
-    else: print(-1)
-  elif 'size' in cmd:
-    print(len(stack))
-  elif 'empty' in cmd:
-    if len(stack) != 0:
-      print(0)
-    else: print(1)
-  else: 
-    if len(stack) != 0:
-      print(stack[-1])
-    else: print(-1)
-# -------------------------------10828---------------------------
-
+# from sys import stdin
+# read = stdin.readline
+# stack = []
+# for _ in range(int(read())):
+#   cmd = read().split()
+#   if 'push' in cmd:
+#     stack.append(int(cmd[1]))
+#   elif 'pop' in cmd:
+#     if len(stack) != 0:
+#       t = stack.pop()
+#       print(t)
+#     else: print(-1)
+#   elif 'size' in cmd:
+#     print(len(stack))
+#   elif 'empty' in cmd:
+#     if len(stack) != 0:
+#       print(0)
+#     else: print(1)
+#   else: 
+#     if len(stack) != 0:
+#       print(stack[-1])
+#     else: print(-1)
+# -------------------------------10773---------------------------
+# from sys import stdin
+# read = stdin.readline
+# stack = []
+# for _ in range(int(read())):
+#   num = int(read())
+#   if num == 0:
+#     stack.pop()
+#   else:
+#     stack.append(num)
+# sum_n = 0
+# for i in stack:
+#   sum_n += i
+# print(sum_n) 
+# -----------------------------9012-----------------------------
 
 
 
