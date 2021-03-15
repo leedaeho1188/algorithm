@@ -593,13 +593,15 @@
 # --------------------------9184번--------------------------------
 # from sys import stdin
 # read = stdin.readline
+# # 해당 키값에 맞는 value값을 memo라는 딕션너리에 저장한다.
 # memo = {
 
 # }
 
 # def w(a, b, c):
+#   # 만약에 memo안에 같은 key값이 있으면 value값을 가져와서 리턴한다.
 #   if (a, b, c) in memo:
-#     return memo[(a, b, c)]
+#     return 2
 
 #   elif a <= 0 or b <= 0 or c <= 0:
 #     return 1
@@ -607,6 +609,7 @@
 #   elif a > 20 or b > 20 or c > 20:
 #     return w(20, 20, 20)
 
+#   # 새로운 key값과 value값들을 메모에 저장하고 value값을 리턴한다.
 #   elif a < b and b < c:
 #     w_num = w(a, b, c-1) + w(a, b-1, c-1) - w(a, b-1, c)
 #     memo[(a, b, c)] = w_num
@@ -619,8 +622,10 @@
 
 # while True:
 #   a, b, c = map(int, read().split())
+#   # a, b, c 값 모두가 -1 때 입력을 마지막으로 해야하기 때문에 while loop을 break한다.
 #   if a == -1 and b == -1 and c == -1 :
 #     break
+#   # %d를 사용해서 ''안에 필요한 지정값을 넣어줄 수 있다.
 #   print('w(%d, %d, %d) = %d' % (a, b, c, w(a, b, c)))
 
   
@@ -659,11 +664,47 @@
 #   lst[i][2] = min(lst[i-1][0], lst[i-1][1]) + lst[i][2]
 # print(min(lst[N-1]))
 
-# -----------------------------------------------------------
+# ----------------------------1932-------------------------------
+# from sys import stdin
+# read = stdin.readline
+# lst = []
+# N = int(read())
+# for _ in range(N):
+#   lst.append(list(map(int, read().split())))
+# for i in range(1, N):
+#   for j in range(len(lst[i])):
+#     if j == 0: 
+#       lst[i][j] += lst[i-1][j]
+#     elif j == len(lst[i])-1:
+#       lst[i][j] += lst[i-1][j-1]
+#     else:
+#       lst[i][j] += max(lst[i-1][j-1], lst[i-1][j]) 
+# print(max(lst[N-1]))
 
-
-
-
+# -----------------------------10828-------------------------------------
+from sys import stdin
+read = stdin.readline
+stack = []
+for _ in range(int(read())):
+  cmd = read().split()
+  if 'push' in cmd:
+    stack.append(int(cmd[1]))
+  elif 'pop' in cmd:
+    if len(stack) != 0:
+      t = stack.pop()
+      print(t)
+    else: print(-1)
+  elif 'size' in cmd:
+    print(len(stack))
+  elif 'empty' in cmd:
+    if len(stack) != 0:
+      print(0)
+    else: print(1)
+  else: 
+    if len(stack) != 0:
+      print(stack[-1])
+    else: print(-1)
+# -------------------------------10828---------------------------
 
 
 
