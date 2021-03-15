@@ -765,15 +765,56 @@
 #       print(deq[-1])
 #     else: print(-1)
 # ----------------------------1037-------------------------------
-from sys import stdin
-read = stdin.readline
-N = int(read())
-num = list(map(int, read().split()))
-num.sort()
-answer = num[0]*num[-1]
-print(answer)
+# from sys import stdin
+# read = stdin.readline
+# N = int(read())
+# num = list(map(int, read().split()))
+# num.sort()
+# answer = num[0]*num[-1]
+# print(answer)
 
 # ----------------------------2609-----------------------------
+# from sys import stdin
+# read = stdin.readline
+# N, M = map(int, read().split())
+# lst = []
+# for i in range(1, min(N, M)+1):
+#   if N%i == 0 and M%i == 0:
+#     lst.append(i)
+# num = max(lst)
+# print(num)
+# print(int((N*M)/num))
+
+# ----------------------------1934-----------------------------
+# from sys import stdin
+# read = stdin.readline
+# for _ in range(int(read())):
+#   N, M = map(int, read().split())
+#   lst = []
+#   for i in range(1, min(N, M)+1):
+#     if N%i == 0 and M%i == 0:
+#       lst.append(i)
+#   num = max(lst)
+#   print(int((N*M)/num))
+
+# -----------------------------11050-----------------------------
+# from sys import stdin
+# read = stdin.readline
+# r, k = map(int, read().split())
+# num_r = 1
+# num_k = 1
+# num_d = 1
+# for i in range(1, r+1):
+#   num_r *= i
+# for j in range(1, k+1):
+#   num_k *= j
+# for x in range(1, r-k+1):
+#   num_d *= x
+# print(int((num_r/num_k)/num_d))
+
+
+
+
 
 
 
