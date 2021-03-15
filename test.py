@@ -719,12 +719,44 @@
 #   sum_n += i
 # print(sum_n) 
 # -----------------------------9012-----------------------------
+# from sys import stdin
+# read = stdin.readline
+# for _ in range(int(read())):
+#   vps = read()
+#   while '()' in vps:
+#     vps = vps.replace('()', '')
+#   if len(vps) == 1:
+#     print('YES')
+#   else: print('NO')
 
-
-
-
-
-
+# --------------------------18258-------------------------------
+# from sys import stdin
+# import collections
+# read = stdin.readline
+# deq = collections.deque()
+# for _ in range(int(read())):
+#   cmd = read().split()
+#   if 'push' in cmd:
+#     deq.append(int(cmd[1]))
+#   elif 'pop' in cmd:
+#     if len(deq) != 0:
+#       t = deq.popleft()
+#       print(t)
+#     else: print(-1)
+#   elif 'size' in cmd:
+#     print(len(deq))
+#   elif 'empty' in cmd:
+#     if len(deq) != 0:
+#       print(0)
+#     else: print(1)
+#   elif 'front' in cmd:
+#     if len(deq) != 0:
+#       print(deq[0])
+#     else: print(-1)
+#   else: 
+#     if len(deq) != 0:
+#       print(deq[-1])
+#     else: print(-1)
 
 
 
