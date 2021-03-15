@@ -764,6 +764,16 @@
 #     if len(deq) != 0:
 #       print(deq[-1])
 #     else: print(-1)
-# -----------------------------------------------------------
+# ----------------------------1037-------------------------------
+from sys import stdin
+read = stdin.readline
+N = int(read())
+num = list(map(int, read().split()))
+num.sort()
+answer = num[0]*num[-1]
+print(answer)
+
+# ----------------------------2609-----------------------------
+
 
 
