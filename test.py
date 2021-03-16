@@ -813,23 +813,43 @@
 # print(int((num_r/num_k)/num_d))
 
 # ------------------------------1010------------------------------
-from sys import stdin
-read = stdin.readline
-for _ in range(int(read())):
-  N, M = map(int, read().split())
-  num_n = 1
-  num_m = 1
-  num_d = 1
-  for i in range(1, N+1):
-    num_n *= i
-  for j in range(1, M+1):
-    num_m *= j
-  for x in range(1, M-N+1):
-    num_d *= x
-  print(int((num_m//num_n)//num_d))
+# # 조합을 이용해서 문제를 풀어야한다.
+# from sys import stdin
+# read = stdin.readline
+# for _ in range(int(read())):
+#   N, M = map(int, read().split())
+#   num_n = 1
+#   num_m = 1
+#   num_d = 1
+#   for i in range(1, N+1):
+#     num_n *= i
+#   for j in range(1, M+1):
+#     num_m *= j
+#   for x in range(1, M-N+1):
+#     num_d *= x
+#   # 큰 숫자들을 나눌때는 '/'하면 안되고 '//'를 해야한다.
+#   print(int((num_m//num_n)//num_d))
 
+# ------------------------------11047-------------------------------
+# from sys import stdin
+# read = stdin.readline
+# N, K = map(int, read().split())
+# lst = []
+# for _ in range(N):
+#   num = int(read())
+#   if num <= K:
+#     lst.append(num)
+# i = -1
+# cnt = 0
+# while True:
+#   if K == 0:
+#     break
+#   cnt += K//lst[i]
+#   K = K%lst[i]
+#   i -= 1
+# print(cnt)
 
-
+# ------------------------------11399----------------------------
 
 
 
