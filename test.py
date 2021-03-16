@@ -850,6 +850,16 @@
 # print(cnt)
 
 # ------------------------------11399----------------------------
+# from sys import stdin
+# read = stdin.readline
+# N = int(read())
+# lst = list(map(int, read().split()))
+# lst.sort()
+# for i in range(1, len(lst)):
+#   lst[i] += lst[i-1]
+# print(sum(lst))
+
+# ----------------------------------------------------------
 
 
 
