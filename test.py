@@ -895,16 +895,29 @@
 # bfs(V)
 
 # -----------------------------1260--------------------------------
-from sys import stdin
-read = stdin.readline
-lst = []
-N = int(read())
-for _ in range(N):
-  lst.append(int(read()))
-print(round((sum(lst))/N))
-lst.sort()
-if N%2 == 0:
-  print()
+# from sys import stdin
+# from collections import Counter
+# read = stdin.readline
+# lst = []
+# N = int(read())
+# for _ in range(N):
+#   lst.append(int(read()))
+# print(round((sum(lst))/N))
+# lst.sort()
+# print(lst[(N//2)])
+# cnt = Counter(lst)
+# lst_x = cnt.most_common()
+# if len(lst_x) == 1:
+#   print(lst_x[0][0])
+# else:
+#   if lst_x[0][1] == lst_x[1][1]:
+#     print(lst_x[1][0])
+#   else: print(lst_x[0][0])
+# print(max(lst)-min(lst))
+
+
+
+
 
 
 
