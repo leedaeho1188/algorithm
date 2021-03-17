@@ -825,7 +825,7 @@
 #     num_n *= i
 #   for j in range(1, M+1):
 #     num_m *= j
-#   for x in range(1, M-N+1):
+#   for x in range(1, (M-N)+1):
 #     num_d *= x
 #   # 큰 숫자들을 나눌때는 '/'하면 안되고 '//'를 해야한다.
 #   print(int((num_m//num_n)//num_d))
@@ -915,7 +915,46 @@
 #   else: print(lst_x[0][0])
 # print(max(lst)-min(lst))
 
+# ----------------------------2630----------------------------------
+# from sys import stdin
+# read = stdin.readline
+# N = int(read())
+# lst = []
+# for _ in range(N):
+#   lst.append(list(map(int, read().split())))
 
+# def conqure(n, lst):
+#   # 이중 리스트안에 1이 없으면 조건충족
+#   if not any(1 in i for i in lst):
+#     # 함수안에서 전역변수값을 가지고 쓸 때 전역변수 값을 변형시킬려면 global을 써야한다.
+#     global cnt_0 
+#     cnt_0 += 1
+#     return
+#   # 이중 리스트안에 0이 없으면 조건충족
+#   elif not any(0 in i for i in lst):
+#     global cnt_1
+#     cnt_1 += 1 
+#     return
+#   else:
+#     lst_0 = []
+#     lst_1 = []
+#     for i in lst:
+#       lst_0.append(i[:n//2])
+#       lst_1.append(i[n//2:])
+#     conqure(n//2, lst_0[:n//2])  
+#     conqure(n//2, lst_0[n//2:]) 
+#     conqure(n//2, lst_1[n//2:]) 
+#     conqure(n//2, lst_1[:n//2])
+#     return
+
+
+# cnt_0 = 0
+# cnt_1 = 0
+# conqure(N, lst)
+# print(cnt_0)
+# print(cnt_1)
+
+# ----------------------------------------------------------
 
 
 
