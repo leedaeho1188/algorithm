@@ -894,7 +894,7 @@
 # print()
 # bfs(V)
 
-# -----------------------------1260--------------------------------
+# -----------------------------2108--------------------------------
 # from sys import stdin
 # from collections import Counter
 # read = stdin.readline
@@ -927,13 +927,11 @@
 #   # 이중 리스트안에 1이 없으면 조건충족
 #   if not any(1 in i for i in lst):
 #     # 함수안에서 전역변수값을 가지고 쓸 때 전역변수 값을 변형시킬려면 global을 써야한다.
-#     global cnt_0 
-#     cnt_0 += 1
+#     lst_cnt.append(0)
 #     return
 #   # 이중 리스트안에 0이 없으면 조건충족
 #   elif not any(0 in i for i in lst):
-#     global cnt_1
-#     cnt_1 += 1 
+#     lst_cnt.append(1)
 #     return
 #   else:
 #     lst_0 = []
@@ -948,13 +946,44 @@
 #     return
 
 
-# cnt_0 = 0
-# cnt_1 = 0
+# lst_cnt = []
 # conqure(N, lst)
-# print(cnt_0)
-# print(cnt_1)
+# print(lst_cnt.count(0))
+# print(lst_cnt.count(1))
+# # 메모리를가 초과할 수 있기 때문에 리스트를 더 만들기보다는 주어진 리스트로 해결하는게 좋타!!
+# ----------------------------15650------------------------------
+# import sys
+# read = sys.stdin.readline
+# N, M = map(int, read().split())
+# lst = [i for i in range(1, N+1)]
+# check_list = [False]*N
 
-# ----------------------------------------------------------
+# arr = []
+# def dfs(cnt):
+#   if cnt == M:
+#     print(*arr)
+#     return
+  
+#   for i in range(N):
+#     if check_list[i]:
+#       continue
+#     check_list[i] = True
+#     arr.append(lst[i])
+#     dfs(cnt+1)
+#     arr.pop()
+    
+
+#     for j in range(i+1, N):
+#       check_list[j] = False
+
+# dfs(0)
+
+
+
+
+
+
+
 
 
 
