@@ -1008,9 +1008,57 @@
 # dfs(0)
 
 
+# -----------------------------10872-----------------------------
+# import sys
+# N = int(sys.stdin.readline())
+# def factorial(n):
+#   if n == 0:
+#     return 1
+#   num = n*factorial(n-1)
+#   return num
 
 
+# print(factorial(N))
 
+
+# --------------------------------10870--------------------------
+# import sys
+# N = int(sys.stdin.readline())
+# def fibonacci(n):
+#   if n == 0:
+#     return 0
+#   if n == 1:
+#     return 1
+#   num = fibonacci(n-1) +fibonacci(n-2)
+#   return num
+
+
+# print(fibonacci(N))
+
+
+# ---------------------------2447------------------------------
+# import sys
+# N = int(sys.stdin.readline())
+# lst = [[' ' for _ in range(N)] for _ in range(N)]
+
+# # 분할 정복을 풀 때처럼 좌표를 놓고 풀면 쉽다.
+# def stars(x, y, n):
+#   if n == 1:
+#     lst[x][y] = '*'
+
+#   else:
+#     for i in range(3):
+#       for j in range(3):
+#         if i != 1 or j != 1:
+#           stars(x+i*(n//3), y+j*(n//3), n//3)
+
+
+# stars(0, 0, N)
+# for i in lst:
+#   print(''.join(i))
+
+
+# -----------------------------1018-----------------------------------
 
 
 
