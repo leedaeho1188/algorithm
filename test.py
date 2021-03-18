@@ -992,7 +992,7 @@
 #   if cnt == M:
 #     print(*arr)
 #     return
-  
+
 #   for i in range(N):
 #     if check_list[i]:
 #       continue
