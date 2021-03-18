@@ -1059,6 +1059,38 @@
 
 
 # -----------------------------1018-----------------------------------
+# N, M = map(int, input().split())
+# lst = []
+# for _ in range(N):
+#   lst.append(input())
+# # cnt가 최대값을 가져서 처음에 다른 최솟값으로 변환할 수 있게했다.
+# cnt = 32
+# for i in range(N-7):
+#   for j in range(M-7):
+#     color = lst[i][j]
+#     cnt_1 = 0
+#     cnt_2 = 0
+#     for x in range(8):
+#       for y in range(8):
+#         if (x+y)%2 == 0:
+#           if lst[i+x][j+y] != color:
+#             cnt_1 +=1
+#           else: cnt_2 +=1
+#         else: 
+#           if lst[i+x][j+y] == color:
+#             cnt_1 +=1
+#           else: cnt_2 +=1
+#     if cnt_1 <= cnt_2:
+#       if cnt_1 < cnt:
+#         cnt = cnt_1
+#     else:
+#       if cnt_2 < cnt:
+#         cnt = cnt_2
+
+# print(cnt)
+
+# ---------------------------------------------------------
+
 
 
 
