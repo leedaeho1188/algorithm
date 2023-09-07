@@ -1,1 +1,1 @@
-# hh99_algorithms
+# algorithm 문제 풀이
