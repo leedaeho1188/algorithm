@@ -17,7 +17,6 @@ function solution(new_id) {
 
   answer.length <= 2 ? new Array(3 - answer.length).fill(answer[answer.length - 1]).forEach((ele) => answer += ele) : null;
   
-
   return answer;
 }
 
