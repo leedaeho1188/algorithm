@@ -7,8 +7,6 @@ function solution(participant, completion) {
     completionObj[completion[i]] = completionObj[completion[i]] ? completionObj[completion[i]] + 1 : 1;
   }
 
-  // console.log(completionObj)
-
   for (let i = 0; i < participant.length; i++) {
     if (completionObj[participant[i]]) {
       completionObj[participant[i]]--;
