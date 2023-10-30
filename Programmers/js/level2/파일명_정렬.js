@@ -6,19 +6,14 @@ function solution(files) {
     const splitA = getHeadNumberTail(a);
     const splitB = getHeadNumberTail(b);
 
-    if(splitA.head > splitB.head){
-      return 1;
-    }
-    else if(splitA.head < splitB.head){
-      return -1;
-    }
+    // console.log(splitA, 'splitA');
+    // console.log(splitB, 'splitB');
+
+    if(splitA.head > splitB.head) return 1;
+    else if(splitA.head < splitB.head) return -1;
     else {
-      if(splitA.number !== splitB.number){
-        return splitA.number - splitB.number;
-      } 
-      else {
-        return 0;
-      }
+      if(splitA.number !== splitB.number) return splitA.number - splitB.number;
+      else return 0;
     }
 
   })
@@ -31,13 +26,23 @@ const getHeadNumberTail = (string) => {
   let lastNumIdx;
 
   for(let i = 0; i < string.length; i++){
-    if(isNaN(string[i]) || string[i] === ''){
+    //string[i]가 문자이거나 빈 값인 경우
+    //빈문자열과 빈공백이 다르다는것 명심!!
+    if(isNaN(string[i]) || string[i] === " "){
       if(firstNumIdx) {
         lastNumIdx = i - 1;
         break;
       }
-    } else {
-      if(!firstNumIdx) firstNumIdx = i;
+    } 
+    //string[i]가 숫자인경우
+    else {
+      if(!firstNumIdx) {
+        firstNumIdx = i;
+        if(i === string.length -1){
+          lastNumIdx = i;
+          break;
+        }
+      }
       else {
         if(i - firstNumIdx === 4){
           lastNumIdx = i;
@@ -57,7 +62,7 @@ const getHeadNumberTail = (string) => {
   return {head, number};
 }
 
-const theAnswer = solution(["F-500001 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-500000 Tomcat"]);
+const theAnswer = solution(["F- 500011 Freedom Fighter", "B- 50 Superfortress", "A-1 Thunderbolt II", "F- 500000 Tomcat", "foo 010", 'muzi1', 'muzi001']);
 
 console.log(theAnswer)
 
