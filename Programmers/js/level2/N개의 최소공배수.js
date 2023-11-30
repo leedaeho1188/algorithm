@@ -34,5 +34,3 @@ function solution(arr) {
 }
 
 const theAnswer = solution([2,6,8,14]);
-
-console.log(theAnswer, 'theAnswer');
